@@ -1,0 +1,19 @@
+version: '2'
+services:
+  consul:
+    image: husseingalal/consul
+    volumes:
+    - /opt/rancher/config
+    - /opt/rancher/ssl
+    - /var/consul
+    ports:
+    - 8500:8500/tcp
+    labels:
+      io.rancher.sidekicks: consul-conf
+  consul-conf:
+    image: registry.example.com:5000/consul-config:master
+    network_mode: container:consul
+    volumes_from:
+    - consul
+    labels:
+      io.rancher.container.hostname_override: container_name
