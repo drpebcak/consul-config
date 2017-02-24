@@ -7,4 +7,4 @@ ADD ./conf.d /etc/confd/conf.d
 ADD ./templates /etc/confd/templates
 
 ENTRYPOINT ["/usr/bin/confd"]
-CMD ["--backend", "rancher", "--prefix", "/2015-07-25", "--log-level", "debug"]
+CMD ["--backend", "rancher", "--prefix", "/2015-07-25", "--node", "rancher-metadata.rancher.internal", "--log-level", "debug"]
