@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.4
 
 ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /usr/bin/confd
 RUN chmod +x /usr/bin/confd && mkdir -p /etc/confd
