@@ -4,6 +4,7 @@
     "bootstrap": false,{{end}}
     "server": true,
     "datacenter": "dc1",
+    "advertise_addr_wan": "{{getv "/self/host/agent_ip"}}",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
     "bind_addr": "{{getv "/self/container/primary_ip"}}",
     "client_addr": "{{getv "/self/container/primary_ip"}}",
