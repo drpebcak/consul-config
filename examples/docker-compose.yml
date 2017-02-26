@@ -8,6 +8,7 @@ services:
     - /consul/data
     labels:
       io.rancher.sidekicks: consul-conf
+      io.rancher.container.dns: true
   consul-conf:
     image: registry.example.com:5000/consul-config:master
     network_mode: service:consul
