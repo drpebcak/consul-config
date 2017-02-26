@@ -1,6 +1,6 @@
 [template]
 src = "consul.crt.tmpl"
-dest = "/consul/config/ssl/consul.crt"
+dest = "/consul/config/consul.crt"
 owner = "root"
 mode = "0644"
 keys = [

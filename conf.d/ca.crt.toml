@@ -1,7 +1,7 @@
 [template]
 prefix = "/services/consul/metadata"
 src = "ca.crt.tmpl"
-dest = "/consul/config/ssl/ca.crt"
+dest = "/consul/config/ca.crt"
 owner = "root"
 mode = "0644"
 keys = [
