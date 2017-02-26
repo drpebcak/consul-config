@@ -1,0 +1,10 @@
+[template]
+src = "master.json.tmpl"
+dest = "/consul/config/master.json"
+owner = "root"
+mode = "0644"
+keys = [
+  "/services/consul/metadata/master.token",
+  "/services/consul/metadata/acl.default.policy",
+  "/services/consul/metadata/acl.down.policy",
+]
