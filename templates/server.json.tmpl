@@ -2,7 +2,7 @@
     {{ if (eq (getv "/self/container/service_index") "1") }}"bootstrap": true,{{else}}
     "retry_join": [{{ $containerName := getv "/self/service/containers/0"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
     "bootstrap": false,{{end}}
-    "raft_protocol": "3",
+    "raft_protocol": 3,
     "server": true,
     "datacenter": "dc1",
     "translate_wan_addrs": true,
