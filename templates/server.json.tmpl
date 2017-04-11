@@ -5,6 +5,7 @@
     "raft_protocol": 3,
     "server": true,
     "datacenter": "dc1",
+    "translate_wan_addrs": true,
     "advertise_addr_wan": "{{getv "/self/host/agent_ip"}}",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
     "bind_addr": "{{getv "/self/container/primary_ip"}}",
