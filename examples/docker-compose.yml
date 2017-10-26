@@ -1,7 +1,7 @@
 version: '2'
 services:
   consul:
-    image: husseingalal/consul
+    image: drpebcak/consul:1.0.0
     network_mode: host
     volumes:
     - /consul/config
@@ -10,7 +10,7 @@ services:
       io.rancher.sidekicks: consul-conf
       io.rancher.container.dns: true
   consul-conf:
-    image: registry.example.com:5000/consul-config:master
+    image: drpebcak/consul-config:1.0.0
     network_mode: service:consul
     volumes_from:
     - consul

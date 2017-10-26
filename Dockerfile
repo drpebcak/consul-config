@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /usr/bin/confd
+ADD https://github.com/kelseyhightower/confd/releases/download/v0.13.0/confd-0.13.0-linux-amd64 /usr/bin/confd
 RUN chmod +x /usr/bin/confd && mkdir -p /etc/confd
 
 ADD ./conf.d /etc/confd/conf.d
