@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/VAdamec/consul-config.svg?branch=master)](https://travis-ci.org/VAdamec/consul-config)
-
 # Consul-config Docker image
 
 This Docker image will use confd with Rancher backend, to will parse the template and replace some values from the metadata of Rancher containers, the values will include the following:
