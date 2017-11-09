@@ -1,9 +1,8 @@
 [template]
-prefix = "/services/consul/metadata"
 src = "ca.crt.tmpl"
 dest = "/consul/config/ca.crt"
 owner = "root"
 mode = "0644"
 keys = [
-  "/ca.crt",
+  "/services/consul/metadata/ca.crt",
 ]

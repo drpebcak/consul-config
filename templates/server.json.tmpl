@@ -1,12 +1,12 @@
 {
     {{ if (eq (getv "/self/container/service_index") "1") }}"bootstrap": true,{{else}}
-    "retry_join": [{{ $containerName := getv "/self/service/containers/0"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
+    "retry_join": [{{ $containerName := getv "/self/service/containers/0/name"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
     "bootstrap": false,{{end}}
     "raft_protocol": 3,
     "server": true,
     "datacenter": "dc1",
     "translate_wan_addrs": true,
-    "advertise_addr_wan": "{{getv "/self/host/agent_ip"}}",
+    "advertise_addr_wan": "{{getv "/self/container/primary_ip"}}",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
     "bind_addr": "{{getv "/self/container/primary_ip"}}",
     "client_addr": "{{getv "/self/container/primary_ip"}}",

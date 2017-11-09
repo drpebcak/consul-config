@@ -4,11 +4,14 @@ dest = "/consul/config/server.json"
 owner = "root"
 mode = "0644"
 keys = [
-  "/self/service/containers",
+  "/self",
+  # "/self/service/containers",
   "/containers",
-  "/self/container/name",
-  "/self/container/primary_ip",
-  "/self/host/agent_ip",
-  "/services/consul/metadata/enc.key",
-  "/self/container/service_index",
+  "/self/service/containers/0/name",
+  # "/self/container/name",
+  # "/self/container/primary_ip",
+  # "/self/host/agent_ip",
+  "/services",
+  # "/services/consul/metadata/enc.key",
+  # "/self/container/service_index",
 ]
