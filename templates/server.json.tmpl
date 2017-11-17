@@ -1,7 +1,6 @@
 {
-    {{ if (eq (getv "/self/container/service_index") "1") }}"bootstrap": true,{{else}}
-    "retry_join": [{{ $containerName := getv "/self/service/containers/0/name"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
-    "bootstrap": false,{{end}}
+    "bootstrap_expect": 3,
+    "retry_join": ["consul-server-consul-1", "consul-server-consul-2", "consul-server-consul-3"],
     "raft_protocol": 3,
     "server": true,
     "datacenter": "dc1",
