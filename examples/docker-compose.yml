@@ -1,7 +1,7 @@
 version: '2'
 services:
   consul:
-    image: tayworm/consul:1.0.0
+    image: tayworm/consul:1.4.4
     network_mode: host
     volumes:
     - /consul/config
